@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://inherent-lynnell-smkn13bdg-1ec4c64b.koyeb.app/'),
 
     /*
     |--------------------------------------------------------------------------
