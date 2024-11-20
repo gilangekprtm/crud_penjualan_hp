@@ -1,7 +1,7 @@
 @extends('home')
 
+@section('title', 'Penjualan')
 @section('content')
-@include('sweetalert::alert')
     <div class="container">
         <div class="row">
             <div class="col-12">

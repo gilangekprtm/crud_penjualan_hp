@@ -1,19 +1,16 @@
 @extends('home')
+@section('title', 'Tambah Penjualan Hp')
 @section('content')
-    <main class="main" id="main">
-        <section class="section dashboard">
-            <div class="col-12">
-                <div class="row">
-                    <div class="card top-selling overflow-auto">
-                        <div class="content">
+<div class="container">
+                        <div class="content mt-4">
                             <div class="animated fadeIn">
                                 <div class="card-header">
-                                    <div class="container-fluid mt-3">
+                                    <div class="mt-5">
                                         <table aria-hidden="true" border="0" cellpadding="0" cellspacing="0"
                                             class="fa fa-text-height" class="fa fa-align-center" width="100%">
                                             <tr>
                                                 <td>
-                                                    <h3 class="card-title">Tambah Penjualan</h3>
+                                                    <h3 class="card-title mb-3">Tambah Penjualan</h3>
                                                 </td>
                                                 <td>
                                                     <div align="right"><a class="btn btn-primary btn-sm mb-1"
@@ -96,9 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-        </section>
-    </main>
+</div>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
