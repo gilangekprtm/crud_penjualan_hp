@@ -73,8 +73,6 @@ class PenjualanController extends Controller
         $products = Product::findOrFail($request->product_id);
         $products->qty = $products->qty - $request->qty;
         $products->save();
-
-        Alert::success('Success', 'Data Berhasil Diinput');
         return redirect()->route('penjualan.index');
     }
 
@@ -137,7 +135,6 @@ class PenjualanController extends Controller
         $product = Product::findOrFail($request->product_id);
         $product->qty -= $request->qty;
         $product->save();
-        Alert::success('Success', 'Data Berhasil Diinput');
         return redirect()->route('penjualan.index');
     }
 
@@ -151,7 +148,6 @@ class PenjualanController extends Controller
         $product->qty += $penjualan->qty;
         $product->save();
         $penjualan->delete();
-        Alert::success('Success', 'Data Berhasil Dihapus');
         return redirect()->route('penjualan.index');
     }
 }

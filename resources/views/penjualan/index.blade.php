@@ -5,16 +5,6 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                @if(session()->has('success'))
-                    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-                    <script>
-                        Swal.fire({
-                            title: "Good job!",
-                            text: "{{ session('success') }}",
-                            icon: "success"
-                        });
-                    </script>
-                @endif
                 <h3 class="mt-5">Penjualan</h3>
                 <a href="{{url('penjualan/create')}}" class="btn btn-primary my-3">Tambah Data</a>
             </div>
@@ -46,7 +36,15 @@
                             href="{{ url('penjualan/' . $item->sales_id . '/edit') }}">
                             <span class="bi bi-pencil-square" style="font-size:12px"></span>
                         </a>
-                        <a href="{{ url('penjualan', $item->sales_id) }}" class="btn btn-danger bi bi-trash btn-sm" data-confirm-delete="true"></a>
+                        <form action="{{ url('penjualan/' . $item->sales_id) }}"
+                            class="d-inline" method="post"
+                            onsubmit="return confirm('Yakin Hapus Data')">
+                            @method('delete')
+                            @csrf
+                            <button class="btn btn-danger btn-sm">
+                                <span class="bi bi-trash"></span>
+                            </button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
