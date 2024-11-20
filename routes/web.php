@@ -2,8 +2,9 @@
 
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\URL;
 
 Route::get('/', function () {
     return view('home');
@@ -22,3 +23,6 @@ Route::post('penjualan', [PenjualanController::class, 'store'])->name('penjualan
 Route::put('penjualan/{sales_id}', [PenjualanController::class, 'update'])->name('penjualan.update');
 Route::delete('penjualan/{sales_id}', [PenjualanController::class, 'destroy'])->name('penjualan.destroy');
 
+if(App::environment('production')) {
+    URL::forceScheme('https');
+}
