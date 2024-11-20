@@ -46,7 +46,7 @@
                             href="{{ url('penjualan/' . $item->sales_id . '/edit') }}">
                             <span class="bi bi-pencil-square" style="font-size:12px"></span>
                         </a>
-                        <a href="{{ route('penjualan.destroy', $item->sales_id) }}" class="btn btn-danger bi bi-trash btn-sm" data-confirm-delete="true"></a>
+                        <a href="{{ url('penjualan', $item->sales_id) }}" class="btn btn-danger bi bi-trash btn-sm" data-confirm-delete="true"></a>
                     </td>
                 </tr>
                 @endforeach
